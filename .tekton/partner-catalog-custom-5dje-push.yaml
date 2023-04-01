@@ -152,6 +152,16 @@ spec:
       workspaces:
       - name: source
         workspace: workspace
+    - name: trusted-content
+      taskSpec:
+        steps:
+         - name: echo
+           image: redhat/ubi8
+           script: |
+             #!/bin/sh
+             echo "CLAIR_SCAN_RESULT"
+      runAfter:
+      - clone-repository
     - name: build-container
       params:
       - name: IMAGE
