@@ -304,10 +304,7 @@ spec:
            image: redhat/ubi8
            script: |
              #!/bin/sh
-             echo "{\"result\":\"FAILURE\",\"timestamp\":\"1680370399\",\"note\":\"For more details please visit the logs in workspace of Tekton tasks.\",\"namespace\":\"optional_checks\",\"successes\":1,\"failures\":1,\"warnings\":0}"
-      workspaces:
-      - name: workspace
-        workspace: workspace
+             echo "roxctl-scan"
     - name: clamav-scan
       params:
       - name: image-digest
